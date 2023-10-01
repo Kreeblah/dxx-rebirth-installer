@@ -3,7 +3,7 @@
 #define MyAppName "DXX-Rebirth"
 #define MyAppName1 "D1X-Rebirth"
 #define MyAppName2 "D2X-Rebirth"
-#define MyAppVersion "0.58.1"
+#define MyAppVersion "0.61.2"
 #define MyAppURL "http://www.dxx-rebirth.com/"
 #define MyAppExeName "d1x-rebirth.exe"
 #define MyAppExeName2 "d2x-rebirth.exe"
@@ -819,11 +819,11 @@ begin
             checkedSuccessfully:=false;
             GetVersionNumbersString(expandconstant('{srcexe}'), ourVersion);
             ourVersion := ChangeFileExt(ourVersion, ''); //Remove the trailing zero
-            ourVersion := ourVersion + '.50'; //Add the installer revision to the version
+            ourVersion := ourVersion + '.51'; //Add the installer revision to the version
 
-            if idpDownloadFile('http://www.dxx-rebirth.com/download/dxx/user/afuturepilot/version2.txt',expandconstant('{tmp}\version2.txt'))then begin
+            if idpDownloadFile('https://github.com/Kreeblah/dxx-rebirth-installer/raw/master/installer_version.txt',expandconstant('{tmp}\installer_version.txt'))then begin
                 { Now read the version from that file and see if it is newer. }
-                LoadStringFromFile(expandconstant('{tmp}\version2.txt'), serversion);
+                LoadStringFromFile(expandconstant('{tmp}\installer_version.txt'), serversion);
                 oldRevision := ExtractFileExt(ourVersion); //Get "current version" revision
                 newRevision := ExtractFileExt(serversion); //Get "new version" revision
                 StringChangeEx(oldRevision, '.', '', true); //Remove . from revision number
