@@ -25,8 +25,8 @@ OutputBaseFilename=DXX-Rebirth_Setup
 OutputDir=C:\DXX-Rebirth
 Compression=lzma2/fast
 SolidCompression=yes
-VersionInfoVersion=0.58.1
-VersionInfoTextVersion=0.58.1
+VersionInfoVersion=0.61.2
+VersionInfoTextVersion=0.61.2
 DirExistsWarning=no
 AppendDefaultDirName=no
 UninstallFilesDir={app}\DXX-Rebirth
@@ -492,7 +492,7 @@ begin
     D1SIndex := 0;
     D2SIndex := 0;
     update := false;
-    installerurl := 'http://www.dxx-rebirth.com/download/dxx/user/afuturepilot/DXX-Rebirth_Setup.exe';
+    installerurl := 'https://github.com/Kreeblah/dxx-rebirth-installer/raw/master/DXX-Rebirth_Setup.exe';
  
 
     {If the download of the new installer fails, we still want to give the
