@@ -32,7 +32,7 @@ This is the Windows Installer for the Descent source port DXX-Rebirth (http://ww
 ###Note:
 If you compile yourself, the version checker will check against the official server. You can change this behavior in the .iss file where it says
 ```
-installerurl := http://www.dxx-rebirth.com/download/dxx/user/afuturepilot/version2.txt
+installerurl := https://github.com/Kreeblah/dxx-rebirth-installer/raw/master/installer_version.txt
 ```
 
-Change that URL to point to a text file on your own server. The syntax is simply the rebirth version with the installer revision added (i.e. 0.58.1.28 is Rebirth version 0.58.1 with installer revision 28).
+Change that URL to point to a text file on your own server. The syntax is simply the rebirth version with the installer revision added (i.e. 0.61.2.51 is Rebirth version 0.61.2 with installer revision 51).
